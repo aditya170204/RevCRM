@@ -1,37 +1,43 @@
-import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
+// import React from 'react';
+// import {createNativeStackNavigator} from '@react-navigation/native-stack';
+// import MainScreen from './src/screens/MainScreen';
+// import Dashboard from './src/screens/Dashboard';
+// import {NavigationContainer} from '@react-navigation/native';
+// import FloatingButton from './src/components/FloatingButton';
+// import Header from './src/components/Header';
+// import {View} from 'react-native';
+
+// const Stack = createNativeStackNavigator();
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <View>
+//         <MainScreen />
+//       </View>
+//     </NavigationContainer>
+//   );
+// };
+
+// export default App;
+
+// App.js
 import React from 'react';
-import {myColor} from './src/myComponents/myColor';
-import Dashboard from './src/screens/Dashboard';
+import {NavigationContainer} from '@react-navigation/native';
+// import DrawerNavigator from './src/navigation/DrawerNavigator';
+// import FloatingButton from './src/components/FloatingButton';
+import {View, StyleSheet} from 'react-native';
+import DrawerNavigator from './src/components/navigation/DrawerNavigator';
+import FloatingButton from './src/components/FloatingButton';
 
 const App = () => {
-  const theme = useColorScheme();
-  console.log('theme', theme);
   return (
-    <View
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: theme === 'dark' ? myColor.dark : myColor.light,
-        borderWidth: 1,
-        borderColor: theme === 'dark' ? myColor.light : myColor.dark,
-        width: '97.6%',
-        marginLeft: '1%',
-        marginTop: '10.5%',
-      }}>
-      {/* <Text
-        style={{
-          fontSize: 20,
-          fontWeight: 'bold',
-          color: theme === 'dark' ? myColor.light : myColor.dark,
-        }}>
-        Haye garmiii {theme} mode ON!
-      </Text>
-      <Text>App</Text> */}
-      <Dashboard />
-    </View>
+    <NavigationContainer>
+      <View style={{flex: 1}}>
+        <DrawerNavigator />
+        <FloatingButton />
+      </View>
+    </NavigationContainer>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});

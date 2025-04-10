@@ -1,91 +1,48 @@
-import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
+// import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
+// import React from 'react';
+
+// import FosContainer from '../myComponents/FosContainer';
+
+// const Dashboard = () => {
+//   // const theme = useColorScheme();
+
+//   return (
+//     <ScrollView showsVerticalScrollIndicator={false}>
+//       {/* <Header /> */}
+
+//       <FosContainer />
+//       <FosContainer />
+//       <FosContainer />
+//       <FosContainer />
+//       <FosContainer />
+//     </ScrollView>
+//   );
+// };
+
+// export default Dashboard;
+
+// const styles = StyleSheet.create({});
+
+// src/screens/Dashboard.js
 import React from 'react';
-import {myColor} from '../myComponents/myColor';
-
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import FosContainer from '../myComponents/FosContainer';
 import Header from '../components/Header';
+// import {ScrollView} from 'react-native-gesture-handler';
 
-const Dashboard = () => {
-  const theme = useColorScheme();
-
-  return (
-    <ScrollView>
-      <View>
-        <Text
-          style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            color: theme === 'dark' ? myColor.light : myColor.dark,
-          }}>
-          Dashboard
-        </Text>
-      </View>
-      <View>{/* <ProfileArea /> */}</View>
-      <Header />
-      <View
-        style={{
-          // backgroundColor: 'grey',
-          width: '93%',
-          marginLeft: '3%',
-          borderRadius: 5,
-          marginVertical: 10,
-        }}>
-        <View
-          style={{
-            // backgroundColor: 'grey',
-            // width: '90%',
-            // marginLeft: '5%',
-            borderRadius: 5,
-            borderWidth: 0.5,
-            borderColor: '#ADADAD',
-            marginVertical: 15,
-          }}>
-          <View style={{paddingLeft: '5%', width: '95%'}}>
-            <View style={{marginVertical: 10}}>
-              <Text style={{fontSize: 20, fontWeight: '600'}}>FOS</Text>
-              <Text style={{fontSize: 24, fontWeight: '600', color: '#75332F'}}>
-                100,000
-              </Text>
-            </View>
-            <View style={{borderWidth: 0.6}} />
-            <View style={{marginVertical: 10}}>
-              <Text style={{fontSize: 20, fontWeight: '600'}}>FOS</Text>
-              <Text style={{fontSize: 24, fontWeight: '600', color: '#75332F'}}>
-                100,000
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View
-          style={{
-            // backgroundColor: 'grey',
-            // width: '90%',
-            // marginLeft: '5%',
-            borderRadius: 5,
-            borderWidth: 0.5,
-            borderColor: '#ADADAD',
-            marginVertical: 15,
-          }}>
-          <View style={{paddingLeft: '5%', width: '95%'}}>
-            <View style={{marginVertical: 10}}>
-              <Text style={{fontSize: 20, fontWeight: '600'}}>FOS</Text>
-              <Text style={{fontSize: 24, fontWeight: '600', color: '#75332F'}}>
-                100,000
-              </Text>
-            </View>
-            <View style={{borderWidth: 0.6}} />
-            <View style={{marginVertical: 10}}>
-              <Text style={{fontSize: 20, fontWeight: '600'}}>FOS</Text>
-              <Text style={{fontSize: 24, fontWeight: '600', color: '#75332F'}}>
-                100,000
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
-    </ScrollView>
-  );
-};
+const Dashboard = () => (
+  <ScrollView>
+    {/* <Text style={styles.text}>Dashboard Screen</Text> */}
+    <Header />
+    <FosContainer />
+    <FosContainer />
+    <FosContainer />
+  </ScrollView>
+);
 
 export default Dashboard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {justifyContent: 'center', alignItems: 'center'},
+  text: {fontSize: 24},
+});
