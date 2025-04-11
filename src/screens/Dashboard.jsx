@@ -33,7 +33,6 @@ import Header from '../components/Header';
 const Dashboard = () => (
   <ScrollView>
     {/* <Text style={styles.text}>Dashboard Screen</Text> */}
-    <Header />
     <FosContainer />
     <FosContainer />
     <FosContainer />

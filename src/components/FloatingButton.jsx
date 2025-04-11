@@ -40,7 +40,7 @@ const FloatingButton = () => {
     <TouchableOpacity
       style={styles.fab}
       onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-      <Icon name="menu" size={20} color="pink" />
+      <Icon name="menu" color="pink" />
     </TouchableOpacity>
   );
 };
@@ -54,7 +54,9 @@ const styles = StyleSheet.create({
     right: '5%',
     backgroundColor: 'pink',
     padding: 16,
-    borderRadius: 50,
+    borderRadius: 14,
     elevation: 5,
+    height: 40,
+    width: 45,
   },
 });

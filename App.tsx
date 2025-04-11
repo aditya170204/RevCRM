@@ -28,12 +28,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {View, StyleSheet} from 'react-native';
 import DrawerNavigator from './src/components/navigation/DrawerNavigator';
 import FloatingButton from './src/components/FloatingButton';
+import Header from './src/components/Header';
 
 const App = () => {
   return (
     <NavigationContainer>
       <View style={{flex: 1}}>
+        <Header />
         <DrawerNavigator />
+
         <FloatingButton />
       </View>
     </NavigationContainer>

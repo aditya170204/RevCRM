@@ -14,7 +14,9 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator initialRouteName="Dashboard">
+    <Drawer.Navigator
+      initialRouteName="Dashboard"
+      screenOptions={{headerShown: false}}>
       <Drawer.Screen name="Dashboard" component={Dashboard} />
       <Drawer.Screen name="Leads" component={Leads} />
       <Drawer.Screen name="Bookings" component={Booking} />
