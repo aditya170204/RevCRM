@@ -15,7 +15,7 @@ const Header = () => {
         padding: 20,
         borderBottomEndRadius: 20,
         borderBottomStartRadius: 20,
-        marginTop: '10%',
+        // marginTop: '10%',
       }}>
       <View style={{width: '15%'}}>
         <View

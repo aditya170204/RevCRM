@@ -33,8 +33,8 @@ import Header from './src/components/Header';
 const App = () => {
   return (
     <NavigationContainer>
-      <View style={{flex: 1}}>
-        <Header />
+      {/* <Header /> */}
+      <View style={{flex: 1, marginTop: '9.6%'}}>
         <DrawerNavigator />
 
         <FloatingButton />

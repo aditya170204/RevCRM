@@ -31,12 +31,17 @@ import Header from '../components/Header';
 // import {ScrollView} from 'react-native-gesture-handler';
 
 const Dashboard = () => (
-  <ScrollView>
-    {/* <Text style={styles.text}>Dashboard Screen</Text> */}
-    <FosContainer />
-    <FosContainer />
-    <FosContainer />
-  </ScrollView>
+  <>
+    <View>
+      <Header />
+    </View>
+    <ScrollView>
+      {/* <Text style={styles.text}>Dashboard Screen</Text> */}
+      <FosContainer />
+      <FosContainer />
+      <FosContainer />
+    </ScrollView>
+  </>
 );
 
 export default Dashboard;

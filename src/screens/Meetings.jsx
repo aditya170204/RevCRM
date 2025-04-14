@@ -1,11 +1,17 @@
 // src/screens/Meetings.js
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import Header from '../components/Header';
 
 const Meetings = () => (
-  <View style={styles.container}>
-    <Text style={styles.text}>Meetings Screen</Text>
-  </View>
+  <>
+    <View>
+      <Header />
+    </View>
+    <View style={styles.container}>
+      <Text style={styles.text}>Meetings Screen</Text>
+    </View>
+  </>
 );
 
 export default Meetings;
